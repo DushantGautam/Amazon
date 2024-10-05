@@ -1,0 +1,324 @@
+/** product.php **/
+
+
+.product-info {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Image Section */
+.image-section {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.image-section img {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Product Info Section */
+.details-section {
+    flex: 2;
+    padding-left: 20px;
+    border-left: 1px solid #ddd;
+}
+
+.details-section h1 {
+    font-size: 28px;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.details-section .rating {
+    margin-bottom: 10px;
+}
+
+.details-section .rating img {
+    width: 100px;
+}
+
+.details-section .price {
+    font-size: 24px;
+    color: #B12704;
+    margin: 20px 0;
+}
+
+.details-section p {
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Specifications Section */
+.specifications-section {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.specifications-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.specifications-section th, 
+.specifications-section td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.specifications-section th {
+    background-color: #f0f0f0;
+}
+
+/* Reviews Section */
+.reviews-section {
+    margin-top: 30px;
+}
+
+.reviews-section h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.review {
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.review h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.review p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Purchase Section */
+.purchase-section {
+    margin-top: 30px;
+    justify-content: space-around;
+    display: flex;
+}
+
+.purchase-section button {
+    background-color: #f0c14b;
+    border: 1px solid #a88734;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.purchase-section button:hover {
+    background-color: #e2b233;
+}
+
+.purchase-section .buy-now {
+    background-color: #FFA41C;
+    border-color: #FF9900;
+    margin-left: 10px;
+}
+
+.purchase-section .buy-now:hover {
+    background-color: #ff8c00;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .image-section {
+        padding-right: 0;
+    }
+
+    .details-section {
+        padding-left: 0;
+        border-left: none;
+    }
+}
+
+
+
+/* cart.php */
+
+
+
+/* Main Container Styling */
+.cart-container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Cart Item Styling */
+.cart-item {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.qty-select1 {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    
+}
+
+/* Product Image Styling */
+.product-image {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.product-details {
+    flex: 1;
+}
+
+/* Product Title Styling */
+.product-details h2 {
+    margin: 0 0 10px;
+    color: #007185;
+}
+
+/* Product Details Styling */
+.product-details p {
+    margin: 5px 0;
+}
+
+/* Input Field Styling */
+input[type="number"] {
+    width: 50px;
+}
+
+/* Remove Button Styling */
+.remove-btn {
+    margin-left: 20px;
+}
+
+button {
+    background-color: #ffa41c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e59400;
+}
+
+/* Cart Summary Section */
+.cart-summary {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.cart-summary p {
+    font-size: 1.2em;
+}
+
+.checkout-btn {
+    background-color: #f0c14b;
+    color: #111;
+    padding: 10px 20px;
+    border: 1px solid #a88734;
+}
+
+.checkout-btn:hover {
+    background-color: #ddb347;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Large Devices (Desktops and Laptops) */
+@media (min-width: 1024px) {
+    .cart-container {
+        width: 60%;
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .cart-container {
+        width: 75%;
+    }
+
+    .cart-item {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .product-image {
+        width: 120px;
+    }
+
+    .remove-btn {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+/* Small Devices (Phones) */
+@media (max-width: 767px) {
+    .cart-container {
+        width: 90%;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product-image {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .remove-btn {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .cart-summary {
+        text-align: center;
+    }
+
+    .checkout-btn {
+        width: 100%;
+    }
+}
